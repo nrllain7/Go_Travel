@@ -1,0 +1,100 @@
+body {
+	font-family: Arial, sans-serif; 
+	background-color: #f1f1f1; 
+	text-align: center; 
+}
+	
+h2 {		
+	color: #5f9ea0 ; 
+	margin: 30px 0; 
+}
+	
+.ui-btn {
+    margin: 10px; 
+}
+	
+.ui-header h1 {
+    color: #367588;
+    font-size: 2.0rem !important;
+    font-style: italic;
+}
+
+.header-image-section {
+  width: 100%;
+  height: 300px; /* adjust as you like */
+  background: url('https://i.pinimg.com/1200x/80/1c/48/801c48c402d5c65577184d1ed505c61a.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* --- Card Styles (added) --- */
+/* --- Card Container --- */
+.card-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  overflow-x: auto;         /* allows horizontal scroll */
+  scroll-snap-type: x mandatory;
+}
+
+/* Each card */
+.card-container .card {
+  flex: 0 0 calc((100% - 60px) / 4); /* 4 cards per row with 20px gap between */
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s;
+}
+
+.card-container .card:hover {
+  transform: scale(1.02);
+}
+
+/* Card images */
+.card img {
+  width: 100%;
+  height: 180px;       /* bigger image */
+  object-fit: cover;
+}
+
+/* Card content */
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  margin: 0;
+  color: #555;
+}
+
+/* --- Responsive for tablets / mobile --- */
+@media (max-width: 1200px) {
+  .card-container .card {
+    flex: 0 0 calc((100% - 40px) / 3); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .card-container .card {
+    flex: 0 0 calc((100% - 30px) / 2); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: row;  /* horizontal scroll */
+  }
+  .card-container .card {
+    flex: 0 0 250px;      /* fixed card width for swipe */
+  }
+}

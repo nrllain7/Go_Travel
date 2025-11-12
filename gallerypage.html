@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoTravel - Gallery</title>
+
+  <!-- jQuery Mobile CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="stylegallery.css">
+</head>
+<body>
+
+<div data-role="page" id="gallery">
+
+  <div data-role="header"><h1>Gallery</h1></div>
+
+  <div role="main" class="ui-content">
+
+    <!-- ===================== IMAGE CAROUSEL ===================== -->
+    <div id="topCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- === First image === -->
+        <div class="carousel-item active">
+          <img src="https://i.pinimg.com/1200x/b3/d6/18/b3d618735641b2bad3e2e65e79a3b7a5.jpg" class="d-block w-100" alt="Paris">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Beautiful Paris</h5>
+            <p>The City of Lights awaits you.</p>
+          </div>
+        </div>
+
+        <!-- === Second image === -->
+        <div class="carousel-item">
+          <img src="https://i.pinimg.com/1200x/ac/98/33/ac9833eb194f46c1c81fd71405c21ec0.jpg" class="d-block w-100" alt="Tokyo">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Tokyo Nights</h5>
+            <p>Experience the neon dreams of Japan.</p>
+          </div>
+        </div>
+
+        <!-- === Third image === -->
+        <div class="carousel-item">
+          <img src="https://i.pinimg.com/736x/19/26/cd/1926cde18d90044e03a876d04d0f7603.jpg" class="d-block w-100" alt="Bali">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Bali Beaches</h5>
+            <p>Relax and unwind by the ocean.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- === Controls === -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#topCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#topCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- ===================== CARD GRID ===================== -->
+    <div class="card-grid">
+      <a href="bookingpage.html" data-ajax="false">
+        <div class="card">
+          <img src="https://i.pinimg.com/1200x/4e/44/98/4e4498e5f4ef948a67d8a78e88e08f31.jpg" alt="France">
+          <div class="card-overlay">France</div>
+        </div>
+      </a>
+      <a href="bookingpage.html" data-ajax="false">
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/16/73/61/1673619d7b14f403ed885799ed438d3a.jpg" alt="Japan">
+          <div class="card-overlay">Japan</div>
+        </div>
+      </a>
+      <a href="bookingpage.html" data-ajax="false">
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/df/ea/84/dfea84da9c1baaf44c131726cc5bef6b.jpg" alt="Indonesia">
+          <div class="card-overlay">Indonesia</div>
+        </div>
+      </a>
+      <a href="bookingpage.html" data-ajax="false">
+        <div class="card">
+          <img src="https://i.pinimg.com/1200x/57/41/f3/5741f3b867e06772d9d1dc814627f666.jpg" alt="America">
+          <div class="card-overlay">America</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Back Button -->
+    <a href="homepage.html" class="ui-btn ui-btn-b ui-corner-all" data-ajax="false">Back to Home</a>
+
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+

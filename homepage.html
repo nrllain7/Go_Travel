@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoTravel - Home</title>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="stylehomepage.css">
+</head>
+<body>
+
+<div data-role="page" id="home">
+
+  <!-- Fixed header with navbar -->
+  <div data-role="header" class="ui-header" style="position: fixed; top: 0; width: 100%; z-index: 999;">
+    <h1>GoTravel Home</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="gallerypage.html" data-ajax="false">Gallery</a></li>
+        <li><a href="bookingpage.html" data-ajax="false">Book a Trip</a></li>
+        <li><a href="index.html" data-ajax="false">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Spacer so content doesn't go under fixed header -->
+  <div style="height: 140px;"></div>
+
+  <!-- Top image -->
+  <div class="header-image-section"></div>
+
+  <div role="main" class="ui-content">
+    <h2>Explore Our Destinations</h2>
+    <p><i>Swipe or click a destination to learn more and book your adventure!</i></p>
+
+    <!-- Swipeable destination cards -->
+    <div class="card-container swipeable">
+      <a href="gallerypage.html" class="card" data-ajax="false">
+        <img src="https://i.pinimg.com/1200x/de/e0/f2/dee0f2a4acdc2d1fab652273802412e9.jpg" alt="Paris">
+        <div class="card-content">
+          <h3>Paris</h3>
+          <p>The city of lights awaits you!</p>
+        </div>
+      </a>
+
+      <a href="gallerypage.html" class="card" data-ajax="false">
+        <img src="https://i.pinimg.com/736x/9a/a4/86/9aa48641cfb6b616f1e37e74bc01b552.jpg" alt="Bali">
+        <div class="card-content">
+          <h3>Bali</h3>
+          <p>Relax on the beaches of Bali.</p>
+        </div>
+      </a>
+
+      <a href="gallerypage.html" class="card" data-ajax="false">
+        <img src="https://i.pinimg.com/736x/0b/45/83/0b458370cbd8fa7011b2868473c94185.jpg" alt="New York">
+        <div class="card-content">
+          <h3>New York</h3>
+          <p>Experience the city that never sleeps!</p>
+        </div>
+      </a>
+
+      <a href="gallerypage.html" class="card" data-ajax="false">
+        <img src="https://i.pinimg.com/1200x/99/a5/f2/99a5f20fdee57e12010f055840eda500.jpg" alt="Tokyo">
+        <div class="card-content">
+          <h3>Tokyo</h3>
+          <p>Discover the vibrant streets of Tokyo.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</body>
+</html>

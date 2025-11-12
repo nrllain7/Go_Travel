@@ -1,0 +1,60 @@
+body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://i.pinimg.com/1200x/ba/ce/70/bace7097a0791be332056ff688ffad88.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .login-card { 
+      max-width: 400px; 
+      margin: 100px auto; 
+      padding: 20px; 
+      background: rgba(255, 255, 255, 0.8); 
+      border-radius: 10px; 
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .login-card h2 { 
+      text-align: center; 
+      margin-bottom: 20px; 
+      color: #5f9ea0; 
+    }
+
+    .error { 
+      color: red; 
+      font-size: 14px; 
+      margin-top: 5px; 
+    }
+
+    .ui-page, .ui-content {
+      background: transparent !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    button.ui-btn.ui-btn-b.ui-corner-all {
+      background-color: #96c8a2;
+      color: #ffffff;
+    }
+
+    button.ui-btn.ui-btn-b.ui-corner-all:hover {
+      background-color: #74a888;
+      color: #ffffff;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Targeting jQuery Mobile header H1 */
+    .ui-header h1 {
+      color: #367588;
+      font-size: 2.0rem !important;
+      font-style: italic;
+    }
