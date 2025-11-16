@@ -1,52 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GoTravel - Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitLife Hub – Fitness & Diet Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-  <!-- jQuery Mobile CSS -->
-  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div data-role="page" id="login">
-    <div data-role="header">
-      <h1>GoTravel Login</h1>
-    </div>
-    <div role="main" class="ui-content">
-      <div class="login-card">
-        <h2>Welcome Back!</h2>
-        <form id="loginForm">
-          <label for="username">Username:</label>
-          <input type="text" id="username" placeholder="Enter username">
-          <label for="password">Password:</label>
-          <input type="password" id="password" placeholder="Enter password">
-          <button type="submit" class="ui-btn ui-btn-b ui-corner-all">Login</button>
-          <div id="errorMsg" class="error"></div>
-        </form>
-      </div>
-    </div>
+<!-- Navigation Bar -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#workout">Workout Plans</a></li>
+    <li><a href="#community">Health Community</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home">
+  <div id="banner">
+    <video autoplay muted loop playsinline>
+      <source src="workout.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
   </div>
 
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script>
-  $("#loginForm").submit(function(e){
-    e.preventDefault();
-    var username = $("#username").val().trim();
-    var password = $("#password").val().trim();
-    if(username === "" || password === ""){
-      $("#errorMsg").text("Please enter both username and password.");
-    } else {
-      window.location.href = "homepage.html"; // go to home page
-    }
-  });
-</script>
+  <!-- Header BELOW the video -->
+  <h1>Welcome to FitLife Hub!</h1>
 
+  <p>
+    Your health and fitness journey starts here. We provide reliable workout plans, nutrition tips, wellness guidance, and a supportive health community to help you achieve your goals. Stay motivated, stay active, and discover your best self today.
+  </p>
+</section>
+
+<!-- WORKOUT PLANS SECTION -->
+<section id="workout">
+  <h2>Workout Plans</h2>
+  <div class="card-container">
+    <div class="program-card" data-info="Improve stamina and endurance. Cardio Training helps you burn calories efficiently and improve heart health."><img src="https://i.pinimg.com/1200x/0d/b8/7c/0db87c9b6402abfa3b976539a4f80986.jpg" alt="Cardio Training"><h3>Cardio Training</h3></div>
+    <div class="program-card" data-info="Build strength and muscle. Strength Training improves muscle mass, bone density, and overall fitness."><img src="https://i.pinimg.com/736x/84/63/55/846355cc0133a118b4205018bee92bec.jpg" alt="Strength Training"><h3>Strength Training</h3></div>
+    <div class="program-card" data-info="Yoga helps improve flexibility, balance, and mental calmness. Ideal for beginners and advanced practitioners."><img src="https://i.pinimg.com/736x/27/ab/77/27ab771c6e009ea5cd645d4c1ada1580.jpg" alt="Yoga & Flexibility"><h3>Yoga & Flexibility</h3></div>
+    <div class="program-card" data-info="Weight Loss Program is designed to burn fat, improve stamina, and promote a healthy lifestyle."><img src="https://i.pinimg.com/736x/b6/71/39/b67139a265c2fc6241140c031926eca2.jpg" alt="Weight Loss Program"><h3>Weight Loss Program</h3></div>
+    <div class="program-card" data-info="Muscle Building routines focus on gaining lean muscle, enhancing strength, and improving posture."><img src="https://i.pinimg.com/736x/03/6a/72/036a728b8a2c5d9f797afadfac461dc0.jpg" alt="Muscle Building"><h3>Muscle Building</h3></div>
+    <div class="program-card" data-info="HIIT Workouts are high-intensity interval training sessions that burn calories fast and boost energy."><img src="https://i.pinimg.com/1200x/1f/cd/61/1fcd61885bcd4fc18acc9df358cec919.jpg" alt="HIIT Workouts"><h3>HIIT Workouts</h3></div>
+    <div class="program-card" data-info="Core & Abs workouts target your abdominal muscles to strengthen your core and improve balance."><img src="https://i.pinimg.com/1200x/7d/9a/d0/7d9ad090aa5638de4364123429bf9c35.jpg" alt="Core & Abs"><h3>Core & Abs</h3></div>
+    <div class="program-card" data-info="Full Body Workouts combine cardio, strength, and flexibility to train your entire body."><img src="https://i.pinimg.com/1200x/d7/14/e3/d714e35043612062b03be4171d756a5b.jpg" alt="Full Body Workouts"><h3>Full Body Workouts</h3></div>
+  </div>
+</section>
+
+<!-- Modal for Workout Info -->
+<div id="programModal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalContent"></p>
+  </div>
+</div>
+
+<!-- HEALTH COMMUNITY SECTION -->
+<section id="community">
+  <h2 style="text-align:center;">Health Community</h2>
+  <p style="max-width:700px;margin:10px auto;font-size:18px;line-height:1.7;text-align:center;">
+    Join our Health Community to connect with people sharing the same goals. Share your progress, join discussions, ask questions, and stay motivated.
+  </p>
+  
+  <form id="communityForm" style="max-width:500px;margin:auto;">
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email Address">
+    
+    <div style="display:flex; gap:10px; margin-bottom:10px;">
+      <input type="text" id="phone" placeholder="Phone Number" style="flex:1;">
+      <select id="level" style="flex:1;">
+        <option value="" disabled selected>Fitness Level</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+    </div>
+    
+    <div style="margin-bottom:10px;">
+      <label>Gender:</label>
+      <select id="gender" style="width:100%;">
+        <option value="" disabled selected>Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+    
+    <div style="margin-bottom:10px;">
+      <label>Interests:</label>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:5px;">
+        <label class="interest-label">Diet Tips <input type="checkbox" name="interest" value="Diet Tips"></label>
+        <label class="interest-label">Exercise Coaching <input type="checkbox" name="interest" value="Exercise Coaching"></label>
+        <label class="interest-label">Health Articles <input type="checkbox" name="interest" value="Health Articles"></label>
+        <label class="interest-label">Weekly Newsletter <input type="checkbox" name="interest" value="Weekly Newsletter"></label>
+      </div>
+    </div>
+    
+    <div style="display:flex; gap:10px; margin-top:15px;">
+      <button type="button" id="submitBtn" style="flex:1;">Submit</button>
+      <button type="reset" style="flex:1;">Reset</button>
+    </div>
+  </form>
+</section>
+
+<!-- CONTACT US SECTION -->
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <div class="contact-info" style="max-width:800px;margin:20px auto;font-size:18px;line-height:1.7;text-align:center;">
+    <p><strong>Address:</strong> 123 FitLife Street, Balik Pulau,Penang, Malaysia</p>
+    <p><strong>Contact Number:</strong> +60 12-345 6789</p>
+    <p><strong>Email:</strong> info@fitlifehub.com</p>
+    <p><strong>Office Number:</strong> +60 3-987 6543</p>
+  </div>
+
+  <p style="font-size:18px;max-width:800px;margin:auto;">Find our location below:</p>
+  <div id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17255.45983235453!2d100.20354962226742!3d5.343458794069159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304aeafdf3434a0d%3A0x6b7411546a715459!2sPoliteknik%20Balik%20Pulau!5e1!3m2!1sen!2smy!4v1763113340529!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  
+  <h3 style="margin-top:20px;">Current Date & Time</h3>
+  <p id="datetime" style="font-size:20px;font-weight:bold;"></p>
+</section>
+
+<footer>
+  Copyright © FitLife Hub. All rights reserved.
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
